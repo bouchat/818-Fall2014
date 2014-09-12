@@ -84,7 +84,7 @@ rankMatrix(perfectly.colinear)
 solve(perfectly.colinear)
 y1<-c(1,2)
 y2<-c(2,4.00000000000001)
-imperfectly.colinear<-cbind(y1,y2)
+notquite.colinear<-cbind(y1,y2)
 solve(notquite.colinear)
 rankMatrix(notquite.colinear)
 
@@ -210,7 +210,7 @@ example(persp)
 
 #One type that you may use often in this course is the boxplot. Let's walk through a built-in R example
 par(mfrow=c(1,1))
-boxplot(len ~ dose, data = ToothGrowth,boxwex = 0.25, at = 1:3-0.2, subset = supp == "VC", col = "yellow", main = "Guinea Pigs' Tooth Growth", xlab = "Vitamin C dose mg", ylab = "tooth length", xlim = c(0.5, 3.5), ylim = c(0, 35), yaxs = "i")
+boxplot(len ~ dose, data = ToothGrowth, boxwex = 0.25, at = 1:3-0.2, subset = supp == "VC", col = "yellow", main = "Guinea Pigs' Tooth Growth", xlab = "Vitamin C dose mg", ylab = "tooth length", xlim = c(0.5, 3.5), ylim = c(0, 35), yaxs = "i")
 boxplot(len~dose, data=ToothGrowth, add=TRUE, boxwex=0.25, at=1:3+0.2, subset=supp=="OJ", col="orange")
 legend(2, 9, c("Ascorbic acid", "Orange juice"),
 fill = c("yellow", "orange"))
