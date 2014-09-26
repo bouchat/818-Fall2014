@@ -13,6 +13,7 @@ library(arm)
 
 
 cox.data<-read.dta("/Users/sbouchat/Downloads/coxappend.dta")
+
 #We will use glm to fit lots of models
 help(glm)
 
@@ -42,7 +43,7 @@ beta.tilde<-mvrnorm(10000,coefficients,var.covar.matrix)
 enps.values <- seq(from=min(cox.data$enps),to=max(cox.data$enps),by=.1)
 
 #maybe we want to look plus minus a standard deviation
-enps.other.values<-seq(from=mean(cox.data$enps)-sd(cox.data$enps),to=mean(cox.data$enps)-sd(cox.data$enps),by=.01)
+enps.other.values<-seq(from=mean(cox.data$enps)-sd(cox.data$enps),to=mean(cox.data$enps)+sd(cox.data$enps),by=.01)
 
 #Now we make a vector of all of the xvalues at their mean
 
