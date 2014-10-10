@@ -80,7 +80,7 @@ plot(roc1, col="red")
 plot(roc2, add=TRUE, col="blue")
 
 # How to do area under the curve just in case
-performance(pred.1,measure="auc")
-performance(pred.2,measure="auc")
+auc1<-performance(pred.1,measure="auc")
+auc2<-performance(pred.2,measure="auc")
 
 
