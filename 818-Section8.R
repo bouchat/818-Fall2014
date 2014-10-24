@@ -135,7 +135,7 @@ abline(h=0, lty=1, lwd=.75, col=grey(.5))
 
 # You can also test this using vglm and a chi squared test between the ordered and multinomial versions of your model
 
-model.ord<-vglm(deathfactor~Temp+Rel.Hum+Exposure, data=snails, family=propodds)
+model.ord<-vglm(ordered(deathfactor)~Temp+Rel.Hum+Exposure, data=snails, family=propodds)
 
 model.multinom<-vglm(deathfactor~Temp+Rel.Hum+Exposure, data=snails, family=multinomial)
 
